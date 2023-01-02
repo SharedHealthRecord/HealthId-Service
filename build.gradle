@@ -5,11 +5,8 @@ subprojects {
     def localEnv = new Properties();
     localEnv.load(new FileInputStream(file("${projectDir}/../env/local.properties")))
 
-    repositories {
-        mavenCentral()
-        maven { url "http://repo.spring.io/snapshot" }
-        maven { url "http://repo.spring.io/libs-snapshot" }
-        maven { url "http://repo.spring.io/milestone" }
+   repositories {
+        maven { url = 'https://repo.maven.apache.org/maven2' }
     }
 
     test {
